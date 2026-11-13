@@ -1,7 +1,8 @@
 # Tugas 5 Kecerdasan Buatan: Sistem Pakar Kualitas Air Kolam Lele
 
-**Nama:** Sri Zulaini
-**NIM:** (isi NIM)
+**Nama:** Sri Zul'aini Ulya
+
+**NIM:** F1D02410096
 
 ## 1. Topik dan Cara Menjalankan
 

@@ -27,7 +27,7 @@ def syarat_terpenuhi(aturan, memori):
 
 def forward_chaining(kb, fakta_awal):
     memori = set(fakta_awal)
-    asal = {}   # fakta turunan -> aturan penghasilnya
+    asal = {}
     log = []
     siklus = 0
     while True:
