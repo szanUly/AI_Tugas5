@@ -1,0 +1,19 @@
+{
+  "judul": "Diagnosis masalah kualitas air kolam budidaya ikan lele",
+  "batas": "Aturan berasal dari 4 artikel ilmiah/pemerintah tentang budidaya lele di kolam (kondisi Indonesia) dan hanya mencakup pH, suhu tinggi, oksigen terlarut, amonia, dan infeksi bakteri akibat suhu berfluktuasi. Hasilnya saran awal, bukan keputusan akhir; ukur ulang dengan alat dan konsultasikan ke penyuluh perikanan.",
+  "sumber": {
+    "S1": "Studi kesesuaian kualitas air untuk budidaya lele dumbo di Kabupaten Bandung (acuan SNI 01-6484.5:2002), Aurelia Journal, Balitbang KKP, https://ejournal-balitbang.kkp.go.id/index.php/aureliajournal/article/download/9887/7241, diakses 13 Nov 2026",
+    "S2": "Efektivitas Bakteri Fotosintetik Rhobac dalam Meningkatkan Kualitas Air pada Budidaya Ikan Lele di Kolam Terpal, STIPER Kutai Timur, https://ojs.stiperkutim.ac.id/index.php/jpt/article/download/610/296, diakses 13 Nov 2026",
+    "S3": "Implementasi Teknologi IoT untuk Monitoring Kolam Budidaya Ikan Lele (Desa Karangreja, Banyumas), Telkom University, https://repositori.telkomuniversity.ac.id/pustaka/files/232195/bab1/implementasi-teknologi-iot-untuk-monitoring-kolam-budidaya-ikan-lele-studi-kasus-kolam-budidaya-ikan-lele-perorangan-desa-karangreja-purwokerto-kidul-kabupaten-banyumas-dalam-bentuk-buku-karya-ilmiah.pdf, diakses 13 Nov 2026",
+    "S4": "Performansi budidaya pembesaran lele sangkuriang di CV Dampo Awang, Sumedang, Jurnal Balitbang KKP, https://ejournal-balitbang.kkp.go.id/index.php/JSJ/article/download/8445/7400, diakses 13 Nov 2026"
+  },
+  "aturan": [
+    {"id": "R1", "jika": ["pH air kurang dari 6,5", "pH air lebih dari 8,5"], "mode": "atau", "maka": "pH air tidak layak", "sumber": "S1, S2"},
+    {"id": "R2", "jika": ["suhu air lebih dari 30 derajat Celsius"], "mode": "dan", "maka": "suhu air di atas batas optimal", "sumber": "S2, S3"},
+    {"id": "R3", "jika": ["oksigen terlarut kurang dari 5 mg/L"], "mode": "dan", "maka": "oksigen terlarut rendah", "sumber": "S2"},
+    {"id": "R4", "jika": ["sisa pakan menumpuk di kolam", "kotoran ikan menumpuk di dasar kolam"], "mode": "atau", "maka": "beban limbah organik tinggi", "sumber": "S3"},
+    {"id": "R5", "jika": ["beban limbah organik tinggi", "kadar amonia 0,01 mg/L atau lebih"], "mode": "dan", "maka": "amonia berlebih dari limbah organik", "sumber": "S1, S3"},
+    {"id": "R6", "jika": ["suhu air di atas batas optimal", "oksigen terlarut rendah"], "mode": "dan", "maka": "ikan berisiko stres akibat suhu dan oksigen", "sumber": "S3"},
+    {"id": "R7", "jika": ["suhu air berfluktuasi", "ikan memiliki bercak pendarahan di tubuh"], "mode": "dan", "maka": "waspada infeksi bakteri", "sumber": "S4"}
+  ]
+}
